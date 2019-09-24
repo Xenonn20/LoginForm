@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loginLabel: UIButton!
+    @IBOutlet weak var forgotLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Setup underline
+        let attrubutedString = NSAttributedString(string: "FORGOT PASSWORD?", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.underlineStyle: 1])
+        
+        forgotLabel.setAttributedTitle(attrubutedString, for: .normal)
+        loginLabel.layer.cornerRadius = 5
+        loginLabel.clipsToBounds = true
     }
 
 
